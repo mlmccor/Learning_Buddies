@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   root to: "home#index"
   resources :users, only: [:show, :index]
   resources :resources, only: [:show, :index]
-  resources :messages, only: [:show, :index]
   resources :skills, only: [:show, :index]
 
   devise_for :users,
