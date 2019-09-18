@@ -1,0 +1,2 @@
+class ResourceSkill < ApplicationRecord
+end
