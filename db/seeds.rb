@@ -14,6 +14,13 @@ liked_users2 = LikedUser.create(original_user_id: 1, liked_user_id: 3)
 liked_users3 = LikedUser.create(original_user_id: 2, liked_user_id: 1)
 liked_users4 = LikedUser.create(original_user_id: 3, liked_user_id: 1)
 
+matched_users1 = MatchedUser.create(user1_id: 1, user2_id: 2)
+matched_users2 = MatchedUser.create(user1_id: 1, user2_id: 3)
+# matched_users3 = MatchedUser.create(user1_id: 2, user2_id: 1)
+# matched_users4 = MatchedUser.create(user1_id: 3, user2_id: 1)
+
+
+
 skill1 = Skill.create(name: "Javascript")
 skill2 = Skill.create(name: "Forex Trading")
 
@@ -31,3 +38,4 @@ user_skill4 = UserSkill.create(user_id: 2, skill_id: 2, mastery: "beginner")
 
 user_skill5 = UserSkill.create(user_id: 3, skill_id: 1, mastery: "beginner")
 user_skill6 = UserSkill.create(user_id: 3, skill_id: 2, mastery: "beginner")
+

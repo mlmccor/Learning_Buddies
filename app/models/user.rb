@@ -5,6 +5,14 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :jwt_authenticatable, jwt_revocation_strategy: JwtBlacklist
 
-  has_many :original_users, class_name: 'LikedUser', foreign_key: :liked_user_id
+  # has_many :original_users, class_name: 'LikedUser', foreign_key: :liked_user_id
   has_many :liked_users, class_name: 'LikedUser', foreign_key: :original_user_id
+  
+  def matched_users
+    MatchedUser.where("user1_id = ? OR user2_id = ?", self.id, self.id)
+  end
+
+  def messages
+    Message.where("sender_id = ? OR receiver_id = ?", self.id, self.id)
+  end
 end
