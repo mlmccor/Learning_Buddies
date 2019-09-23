@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :email, :name, :age, :gender, :bio, :liked_users, :messages, :matched_users
+  attributes :id, :email, :name, :age, :gender, :bio, :liked_users, :messages, :matched_users, :skills
 
   def liked_users 
     users = object.liked_users.collect do |liked_user|
