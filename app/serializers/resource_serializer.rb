@@ -1,3 +1,3 @@
 class ResourceSerializer < ActiveModel::Serializer
-  attributes :id, :name
+  attributes :id, :name, :skills
 end
