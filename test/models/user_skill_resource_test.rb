@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ResourceSkillTest < ActiveSupport::TestCase
+class UserSkillResourceTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

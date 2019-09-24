@@ -20,7 +20,7 @@ class UsersController < ApplicationController
         @users = User.all
 
         respond_to do |format|
-            format.json  { render :json => @users, include: "***" }
+            format.json  { render :json => @users, include: "**" }
         end
     end
 

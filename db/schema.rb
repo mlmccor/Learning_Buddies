@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_18_103657) do
+ActiveRecord::Schema.define(version: 2019_09_24_174952) do
 
   create_table "jwt_blacklists", force: :cascade do |t|
     t.string "jti"
@@ -43,13 +43,6 @@ ActiveRecord::Schema.define(version: 2019_09_18_103657) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "resource_skills", force: :cascade do |t|
-    t.integer "skill_id"
-    t.integer "resource_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "resources", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -58,6 +51,13 @@ ActiveRecord::Schema.define(version: 2019_09_18_103657) do
 
   create_table "skills", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_skill_resources", force: :cascade do |t|
+    t.integer "user_skill_id"
+    t.integer "resource_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

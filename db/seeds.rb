@@ -27,8 +27,8 @@ skill2 = Skill.create(name: "Forex Trading")
 resource1 = Resource.create(name: "Udemy")
 resource2 = Resource.create(name: "Babypips")
 
-resource_skill1 = ResourceSkill.create(skill_id: 1, resource_id: 1)
-resource_skill2 = ResourceSkill.create(skill_id: 2, resource_id: 2)
+# resource_skill1 = ResourceSkill.create(skill_id: 1, resource_id: 1)
+# resource_skill2 = ResourceSkill.create(skill_id: 2, resource_id: 2)
 
 user_skill1 = UserSkill.create(user_id: 1, skill_id: 1, mastery: "intermediate")
 user_skill2 = UserSkill.create(user_id: 1, skill_id: 2, mastery: "beginner")
@@ -39,3 +39,12 @@ user_skill4 = UserSkill.create(user_id: 2, skill_id: 2, mastery: "beginner")
 user_skill5 = UserSkill.create(user_id: 3, skill_id: 1, mastery: "beginner")
 user_skill6 = UserSkill.create(user_id: 3, skill_id: 2, mastery: "beginner")
 
+user_skill_resource1 = UserSkillResource.create(user_skill_id: user_skill1.id, resource_id: resource1.id)
+user_skill_resource2 = UserSkillResource.create(user_skill_id: user_skill1.id, resource_id: resource2.id)
+user_skill_resource3 = UserSkillResource.create(user_skill_id: user_skill2.id, resource_id: resource2.id)
+
+user_skill_resource4 = UserSkillResource.create(user_skill_id: user_skill3.id, resource_id: resource1.id)
+user_skill_resource5 = UserSkillResource.create(user_skill_id: user_skill4.id, resource_id: resource2.id)
+
+user_skill_resource6 = UserSkillResource.create(user_skill_id: user_skill5.id, resource_id: resource1.id)
+user_skill_resource7 = UserSkillResource.create(user_skill_id: user_skill6.id, resource_id: resource2.id)
