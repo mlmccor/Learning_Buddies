@@ -1,10 +1,6 @@
 class Skill < ApplicationRecord
     has_many :user_skills
-    has_many :users, through: :user_skills
+    has_many :users, -> { distinct }, through: :user_skills, foreign_key: :user_id
 
-    # has_many :resource_skills
-    # has_many :resources, through: :resource_skills
-
-    has_many :user_skill_resources, through: :user_skills
-    has_many :resources, -> { distinct }, through: :user_skill_resources
+    has_many :resources, -> { distinct }, through: :user_skills, foreign_key: :skill_id
 end

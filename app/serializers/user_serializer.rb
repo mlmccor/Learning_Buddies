@@ -1,11 +1,16 @@
 class UserSerializer < ActiveModel::Serializer
   attributes :id, :email, :name, :age, :gender, :bio, :liked_users, :messages, :matched_users, :skills
   
-  def skills 
-    user_skills = object.skills.collect do |skill|
-      user_skill = skill
-    end
-  end 
+  has_many :skills, serializer: SkillSerializer 
+
+  # def skills 
+  #   user_skills = object.skills.collect do |skill|
+  #     user_skill = skill
+  #   end
+    
+  # end 
+
+
 
   def liked_users 
     users = object.liked_users.collect do |liked_user|
